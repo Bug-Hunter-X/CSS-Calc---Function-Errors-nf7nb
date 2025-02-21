@@ -1,0 +1,30 @@
+/* bugSolution.css */
+
+/* Correcting negative width issue */
+.container {
+  width: 200px; /* Ensure parent has sufficient width */
+}
+
+.child {
+  width: calc(100% - 10px);
+}
+
+/* Correcting unit inconsistency */
+.element {
+  width: calc(100px + 5em); /*This is still a potential issue - consider converting units to pixels*/
+  /*Better approach: Convert em to px (or vice versa) to avoid inconsistencies*/
+  /*width: calc(100px + 5 * 16px);  /* Assuming 1em = 16px */
+}
+
+/*Simplifying nested calc() */
+.nested {
+  /*Avoid nested calc if possible*/
+  /*width: calc(calc(100% - 20px) / 2);*/ 
+  /*Better: precalculate*/
+  width: calc(50% - 10px);
+}
+
+/*Handling potential zero or negative values*/
+.safeCalc {
+  width: max(0, calc(100% - 200px)); /* Ensures width is never negative */
+}
