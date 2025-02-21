@@ -1,0 +1,3 @@
+# CSS Calc() Function Errors
+
+This repository demonstrates common errors that can occur when using the CSS `calc()` function and provides solutions to avoid those errors.  The `calc()` function is powerful for dynamic calculations, but requires careful attention to detail to prevent unexpected behavior and layout issues.  Read the file `bug.css` to observe examples of improper `calc()` usage and then refer to `bugSolution.css` for the corrected code.
